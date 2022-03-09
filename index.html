@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity generator</title>
+    <link rel="stylesheet" href="./dist/style.css" />
+  </head>
+  <body>
+    <div class="info__container">
+      <p>Activity: Description of the queried activity</p>
+      <p>
+        Accessibility: A factor describing how possible an event is to do with
+        zero being the most accessible
+      </p>
+      <p>Participants: The number of people that this activity could involve</p>
+      <p>Type: Type of the activity</p>
+    </div>
+
+    <div class="activity-container | js-activity-container"></div>
+    <button class="activity-btn | js-btn">Generate activity</button>
+    <script src="./dist/main.js"></script>
+  </body>
+</html>
