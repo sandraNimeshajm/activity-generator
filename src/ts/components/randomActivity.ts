@@ -25,10 +25,13 @@ const randomActivity = () => {
     const activityHTMLString = `
           <div class="activity__card">
           <h1 class="activity__card-title">Random activity generator</h1>
-              <p class="activity__card-text">Activity: ${activity.activity}</p>
-               <p class="activity__card-text">Accessibility: ${activity.accessibility}</p>
-              <p class="activity__card-text">Participants: ${activity.participants}</p>
-              <p class="activity__card-text">Type: ${activity.type}</p>
+          <div class="activity__card-text-box">
+          <p class="activity__card-text"><span class="activity__card-text-title">Activity</span>: ${activity.activity}</p>
+               <p class="activity__card-text"><span class="activity__card-text-title">Accessibility</span>: ${activity.accessibility}</p>
+              <p class="activity__card-text"><span class="activity__card-text-title">Participants</span>: ${activity.participants}</p>
+              <p class="activity__card-text"><span class="activity__card-text-title">Type</span>: ${activity.type}</p>
+          </div>
+              
               
           </div>
       `;

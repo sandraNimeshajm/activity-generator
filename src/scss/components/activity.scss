@@ -1,16 +1,14 @@
 .activity {
-  margin: 64px 0;
+  margin-top: 64px;
 }
 
 .activity__card {
-  max-width: 500px;
+  max-width: 950px;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 32px;
-  border: 2px solid $black;
   margin: 0 auto;
   position: relative;
   z-index: 1;
@@ -18,12 +16,36 @@
 
 .activity__card-title {
   @extend .roboto-48-bold;
-  margin-bottom: 24px;
+  margin-bottom: 48px;
   text-align: center;
+  background-color: $orange;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.activity__card-text-title {
+  font-weight: bold;
+  background-color: $orange;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.activity__card-text-box {
+  max-width: 900px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 16px;
+  margin-bottom: 48px;
 }
 
 .activity__card-text {
   @extend .roboto-24-normal;
+  max-width: 400px;
+  width: 100%;
+  height: 100px;
   text-align: center;
-  margin-bottom: 16px;
+  border: 2px solid $black;
+  margin-right: 16px;
+  padding: 12px;
 }
