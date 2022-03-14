@@ -1,6 +1,23 @@
 /*!**************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/style.scss ***!
   \**************************************************************************************************************/
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes fadeFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px); }
+  50% {
+    opacity: 0;
+    transform: translateY(-30px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
 html,
 body {
   -webkit-font-smoothing: antialiased;
@@ -146,25 +163,61 @@ td {
   font-family: "Roboto", sans-serif;
   font-size: 48px;
   font-weight: bold; }
+  @media screen and (max-width: 1440px) {
+    .roboto-48-bold, .activity__card-title {
+      font-size: 32px; } }
+  @media screen and (max-width: 991px) {
+    .roboto-48-bold, .activity__card-title {
+      font-size: 24px; } }
+  @media screen and (max-width: 768px) {
+    .roboto-48-bold, .activity__card-title {
+      font-size: 18px; } }
+  @media screen and (max-width: 480px) {
+    .roboto-48-bold, .activity__card-title {
+      font-size: 16px; } }
 
 .roboto-32-bold, .info__title {
   font-family: "Roboto", sans-serif;
   font-size: 32px;
   font-weight: bold; }
+  @media screen and (max-width: 1440px) {
+    .roboto-32-bold, .info__title {
+      font-size: 24px; } }
+  @media screen and (max-width: 991px) {
+    .roboto-32-bold, .info__title {
+      font-size: 18px; } }
+  @media screen and (max-width: 768px) {
+    .roboto-32-bold, .info__title {
+      font-size: 16px; } }
+  @media screen and (max-width: 480px) {
+    .roboto-32-bold, .info__title {
+      font-size: 14px; } }
 
 .roboto-24-normal, .btn, .info__text-box, .activity__card-text {
   font-family: "Roboto", sans-serif;
   font-size: 24px;
   font-weight: normal; }
+  @media screen and (max-width: 1440px) {
+    .roboto-24-normal, .btn, .info__text-box, .activity__card-text {
+      font-size: 16px; } }
+  @media screen and (max-width: 991px) {
+    .roboto-24-normal, .btn, .info__text-box, .activity__card-text {
+      font-size: 14px; } }
+  @media screen and (max-width: 768px) {
+    .roboto-24-normal, .btn, .info__text-box, .activity__card-text {
+      font-size: 12px; } }
 
 /* Components */
 .info {
   margin-top: -380px;
   visibility: hidden;
-  opacity: 0; }
+  opacity: 0;
+  animation: 1s fadeFromTop cubic-bezier(0.38, 0.005, 0.215, 1) forwards; }
   .info.show {
     visibility: visible;
     opacity: 1; }
+  .info.animate {
+    animation: 1s fadeOut cubic-bezier(0.38, 0.005, 0.215, 1) forwards; }
 
 .info__wrapper {
   max-width: 1200px;
@@ -176,14 +229,42 @@ td {
   padding: 24px;
   position: relative;
   z-index: 10; }
+  @media screen and (max-width: 1440px) {
+    .info__wrapper {
+      max-width: 950px; } }
+  @media screen and (max-width: 1280px) {
+    .info__wrapper {
+      max-width: 750px; } }
+  @media screen and (max-width: 991px) {
+    .info__wrapper {
+      max-width: 550px; } }
+  @media screen and (max-width: 768px) {
+    .info__wrapper {
+      max-width: 300px; } }
 
 .info__close-btn {
   display: flex;
   margin-left: auto;
   max-width: 30px;
   width: 100%;
-  height: 17px;
   cursor: pointer; }
+  .info__close-btn svg {
+    fill: #000;
+    transition: fill 0.3s; }
+    .info__close-btn svg:hover {
+      fill: #70e1f5; }
+  @media screen and (max-width: 1440px) {
+    .info__close-btn {
+      max-width: 25px; } }
+  @media screen and (max-width: 991px) {
+    .info__close-btn {
+      max-width: 20px; } }
+  @media screen and (max-width: 768px) {
+    .info__close-btn {
+      max-width: 18px; } }
+  @media screen and (max-width: 480px) {
+    .info__close-btn {
+      max-width: 15px; } }
 
 .info__title {
   max-width: 450px;
@@ -199,6 +280,8 @@ td {
   border-bottom: 4px solid #70e1f5; }
 
 .info__text-box {
+  max-width: 1150px;
+  width: 100%;
   text-align: center; }
   .info__text-box p:not(:last-child) {
     margin-bottom: 16px; }
@@ -223,6 +306,15 @@ td {
   background-color: #ffd194;
   border-radius: 20px;
   padding: 5px; }
+  @media screen and (max-width: 1440px) {
+    .activity__card-title {
+      margin-bottom: 32px; } }
+  @media screen and (max-width: 991px) {
+    .activity__card-title {
+      margin-bottom: 24px; } }
+  @media screen and (max-width: 768px) {
+    .activity__card-title {
+      margin-bottom: 16px; } }
 
 .activity__card-text-title {
   font-weight: bold;
@@ -233,10 +325,25 @@ td {
 .activity__card-text-box {
   max-width: 900px;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   grid-gap: 16px;
   margin-bottom: 48px; }
+  .activity__card-text-box.animate {
+    animation: 1s fadeOut cubic-bezier(0.38, 0.005, 0.215, 1) forwards; }
+  @media screen and (max-width: 1440px) {
+    .activity__card-text-box {
+      max-width: 800px;
+      margin-bottom: 32px; } }
+  @media screen and (max-width: 991px) {
+    .activity__card-text-box {
+      max-width: 700px;
+      margin-bottom: 24px; } }
+  @media screen and (max-width: 768px) {
+    .activity__card-text-box {
+      max-width: 450px;
+      margin-bottom: 16px; } }
 
 .activity__card-text {
   max-width: 400px;
@@ -244,6 +351,17 @@ td {
   height: 100px;
   text-align: center;
   border: 2px solid #000;
-  margin-right: 16px;
   padding: 12px; }
+  @media screen and (max-width: 1440px) {
+    .activity__card-text {
+      max-width: 350px;
+      height: 80px; } }
+  @media screen and (max-width: 991px) {
+    .activity__card-text {
+      max-width: 300px;
+      height: 60px; } }
+  @media screen and (max-width: 768px) {
+    .activity__card-text {
+      max-width: 250px;
+      height: 50px; } }
 

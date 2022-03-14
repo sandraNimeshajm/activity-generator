@@ -21,6 +21,18 @@
   background-color: $orange;
   border-radius: 20px;
   padding: 5px;
+
+  @include mq(1440) {
+    margin-bottom: 32px;
+  }
+
+  @include mq(991) {
+    margin-bottom: 24px;
+  }
+
+  @include mq(768) {
+    margin-bottom: 16px;
+  }
 }
 
 .activity__card-text-title {
@@ -33,10 +45,30 @@
 .activity__card-text-box {
   max-width: 900px;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   grid-gap: 16px;
   margin-bottom: 48px;
+
+  &.animate {
+    animation: 1s fadeOut cubic-bezier(0.38, 0.005, 0.215, 1) forwards;
+  }
+
+  @include mq(1440) {
+    max-width: 800px;
+    margin-bottom: 32px;
+  }
+
+  @include mq(991) {
+    max-width: 700px;
+    margin-bottom: 24px;
+  }
+
+  @include mq(768) {
+    max-width: 450px;
+    margin-bottom: 16px;
+  }
 }
 
 .activity__card-text {
@@ -46,6 +78,20 @@
   height: 100px;
   text-align: center;
   border: 2px solid $black;
-  margin-right: 16px;
   padding: 12px;
+
+  @include mq(1440) {
+    max-width: 350px;
+    height: 80px;
+  }
+
+  @include mq(991) {
+    max-width: 300px;
+    height: 60px;
+  }
+
+  @include mq(768) {
+    max-width: 250px;
+    height: 50px;
+  }
 }

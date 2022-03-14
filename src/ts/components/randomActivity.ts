@@ -1,6 +1,7 @@
 const randomActivity = () => {
   const activityContainer = document.querySelector(".js-activity");
   const activityBtn = document.querySelector(".js-btn");
+  const activityTextBox = document.querySelector(".js-activity-card-text-box");
 
   const fetchActivity = () => {
     const url = `https://www.boredapi.com/api/activity`;
@@ -17,6 +18,7 @@ const randomActivity = () => {
         };
 
         displayActivity(activity);
+        activityTextBox.classList.add("animate");
       });
   };
   fetchActivity();
@@ -25,7 +27,7 @@ const randomActivity = () => {
     const activityHTMLString = `
           <div class="activity__card">
           <h1 class="activity__card-title">Random activity generator</h1>
-          <div class="activity__card-text-box">
+          <div class="activity__card-text-box | js-activity-card-text-box">
           <p class="activity__card-text"><span class="activity__card-text-title">Activity</span>: ${activity.activity}</p>
                <p class="activity__card-text"><span class="activity__card-text-title">Accessibility</span>: ${activity.accessibility}</p>
               <p class="activity__card-text"><span class="activity__card-text-title">Participants</span>: ${activity.participants}</p>

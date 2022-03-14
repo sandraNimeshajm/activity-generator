@@ -2,10 +2,15 @@
   margin-top: -380px;
   visibility: hidden;
   opacity: 0;
+  animation: 1s fadeFromTop cubic-bezier(0.38, 0.005, 0.215, 1) forwards;
 
   &.show {
     visibility: visible;
     opacity: 1;
+  }
+
+  &.animate {
+    animation: 1s fadeOut cubic-bezier(0.38, 0.005, 0.215, 1) forwards;
   }
 }
 
@@ -19,6 +24,22 @@
   padding: 24px;
   position: relative;
   z-index: 10;
+
+  @include mq(1440) {
+    max-width: 950px;
+  }
+
+  @include mq(1280) {
+    max-width: 750px;
+  }
+
+  @include mq(991) {
+    max-width: 550px;
+  }
+
+  @include mq(768) {
+    max-width: 300px;
+  }
 }
 
 .info__close-btn {
@@ -26,8 +47,33 @@
   margin-left: auto;
   max-width: 30px;
   width: 100%;
-  height: 17px;
+  // height: 17px;
   cursor: pointer;
+
+  svg {
+    fill: $black;
+    transition: fill 0.3s;
+
+    &:hover {
+      fill: $blue;
+    }
+  }
+
+  @include mq(1440) {
+    max-width: 25px;
+  }
+
+  @include mq(991) {
+    max-width: 20px;
+  }
+
+  @include mq(768) {
+    max-width: 18px;
+  }
+
+  @include mq(480) {
+    max-width: 15px;
+  }
 }
 
 .info__title {
@@ -48,6 +94,8 @@
 
 .info__text-box {
   @extend .roboto-24-normal;
+  max-width: 1150px;
+  width: 100%;
   text-align: center;
 
   p:not(:last-child) {

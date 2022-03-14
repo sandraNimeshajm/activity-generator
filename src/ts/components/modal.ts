@@ -11,6 +11,7 @@ const modal = () => {
   }
 
   function modalClose() {
+    info.classList.add("animate");
     info.classList.remove("show");
     activity.style.opacity = String(1);
     activityBtn.style.opacity = String(1);
