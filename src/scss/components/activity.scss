@@ -95,3 +95,37 @@
     height: 50px;
   }
 }
+
+@include mq(1921, min) {
+  .activity {
+    margin-top: 3.33333vw;
+  }
+
+  .activity__card {
+    max-width: 49.47917vw;
+  }
+
+  .activity__card-title {
+    margin-bottom: 2.5vw;
+    border-radius: 1.04167vw;
+    padding: 0.26042vw;
+  }
+
+  .activity__card-text-title {
+    border-radius: 1.04167vw;
+    padding: 0.26042vw;
+  }
+
+  .activity__card-text-box {
+    max-width: 46.875vw;
+    grid-gap: 0.83333vw;
+    margin-bottom: 2.5vw;
+  }
+
+  .activity__card-text {
+    max-width: 20.83333vw;
+    height: 5.20833vw;
+    border: 0.10417vw solid $black;
+    padding: 0.625vw;
+  }
+}

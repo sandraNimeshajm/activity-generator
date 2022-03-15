@@ -68,3 +68,17 @@
     font-size: 12px;
   }
 }
+
+@include mq(1921, min) {
+  .roboto-48-bold {
+    font-size: 2.5vw;
+  }
+
+  .roboto-32-bold {
+    font-size: 1.66667vw;
+  }
+
+  .roboto-24-normal {
+    font-size: 1.25vw;
+  }
+}

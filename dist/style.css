@@ -48,6 +48,10 @@ body {
   width: 100%;
   padding: 0 100px;
   margin: 0 auto; }
+  @media screen and (min-width: 1921px) {
+    .wrapper {
+      max-width: 75.52083vw;
+      padding: 0 5.20833vw; } }
   @media screen and (max-width: 1440px) {
     .wrapper {
       padding: 0 64px; } }
@@ -74,6 +78,10 @@ body {
       background-color: #ffd194;
       border: 2px solid #ffd194;
       box-shadow: 0 0 10px 0 #ffd194 inset, 0 0 20px 2px #ffd194; } }
+  @media screen and (min-width: 1921px) {
+    .btn {
+      padding: 0.625vw 0.83333vw;
+      border: 0.10417vw solid #000; } }
 
 a {
   text-decoration: none; }
@@ -207,6 +215,14 @@ td {
     .roboto-24-normal, .btn, .info__text-box, .activity__card-text {
       font-size: 12px; } }
 
+@media screen and (min-width: 1921px) {
+  .roboto-48-bold, .activity__card-title {
+    font-size: 2.5vw; }
+  .roboto-32-bold, .info__title {
+    font-size: 1.66667vw; }
+  .roboto-24-normal, .btn, .info__text-box, .activity__card-text {
+    font-size: 1.25vw; } }
+
 /* Components */
 .info {
   margin-top: -380px;
@@ -249,6 +265,8 @@ td {
   width: 100%;
   cursor: pointer; }
   .info__close-btn svg {
+    width: 30px;
+    height: 30px;
     fill: #000;
     transition: fill 0.3s; }
     .info__close-btn svg:hover {
@@ -285,6 +303,31 @@ td {
   text-align: center; }
   .info__text-box p:not(:last-child) {
     margin-bottom: 16px; }
+
+@media screen and (min-width: 1921px) {
+  .info {
+    margin-top: -19.79167vw; }
+  .info__wrapper {
+    max-width: 62.5vw;
+    border: 0.10417vw solid #fff;
+    border-radius: 1.04167vw;
+    padding: 1.25vw; }
+  .info__close-btn {
+    max-width: 1.5625vw; }
+    .info__close-btn svg {
+      width: 1.5625vw;
+      height: 1.5625vw; }
+  .info__title {
+    max-width: 23.4375vw;
+    margin: 0 auto 1.25vw;
+    border-radius: 1.04167vw;
+    padding: 0.26042vw; }
+  .info__text-title {
+    border-bottom: 0.20833vw solid #70e1f5; }
+  .info__text-box {
+    max-width: 59.89583vw; }
+    .info__text-box p:not(:last-child) {
+      margin-bottom: 0.83333vw; } }
 
 .activity {
   margin-top: 64px; }
@@ -364,4 +407,26 @@ td {
     .activity__card-text {
       max-width: 250px;
       height: 50px; } }
+
+@media screen and (min-width: 1921px) {
+  .activity {
+    margin-top: 3.33333vw; }
+  .activity__card {
+    max-width: 49.47917vw; }
+  .activity__card-title {
+    margin-bottom: 2.5vw;
+    border-radius: 1.04167vw;
+    padding: 0.26042vw; }
+  .activity__card-text-title {
+    border-radius: 1.04167vw;
+    padding: 0.26042vw; }
+  .activity__card-text-box {
+    max-width: 46.875vw;
+    grid-gap: 0.83333vw;
+    margin-bottom: 2.5vw; }
+  .activity__card-text {
+    max-width: 20.83333vw;
+    height: 5.20833vw;
+    border: 0.10417vw solid #000;
+    padding: 0.625vw; } }
 

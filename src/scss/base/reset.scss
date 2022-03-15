@@ -33,6 +33,11 @@ body {
   padding: 0 100px;
   margin: 0 auto;
 
+  @include mq(1921, min) {
+    max-width: 75.52083vw;
+    padding: 0 5.20833vw;
+  }
+
   @include mq(1440) {
     padding: 0 64px;
   }
@@ -63,6 +68,11 @@ body {
     background-color: $orange;
     border: 2px solid $orange;
     box-shadow: 0 0 10px 0 $orange inset, 0 0 20px 2px $orange;
+  }
+
+  @include mq(1921, min) {
+    padding: 0.625vw 0.83333vw;
+    border: 0.10417vw solid $black;
   }
 }
 
